@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
+    background-color: #f6f4f2;
 }
 
 .skip a {
@@ -29,7 +30,20 @@ h1 {
 }
 
 .h1, h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #425664;
+}
+
+.overview-txt {
+    padding: 10%;
+    background-color: #425664;
+    color: #ffffff;
+    margin-bottom: 10%;
+}
+
+.overview-txt h1 {
+    color: #ffffff;
 }
 
 p {
@@ -49,6 +63,10 @@ p > a {
     color: #000000;
 }
 
+.overview-txt p > a {
+    color: #ffffff;
+}
+
 p > a:hover {
     -webkit-text-decoration-style: dotted;
     text-decoration-style: dotted;
@@ -57,10 +75,6 @@ p > a:hover {
 a:hover, a:focus {
     text-decoration: underline;
     color: #00838F !important; 
-}
-
-.navbar-brand {
-    font-weight: bold;
 }
 
 .festival {
@@ -78,6 +92,7 @@ a:hover, a:focus {
     width: 80%;
     margin: 10px;
     overflow: auto;
+    background-color: #ffffff;
 }
 
 .festival-item:hover, .festival-item:focus {
@@ -128,6 +143,7 @@ img {
 .grid-container > img {
     max-width: 100%;
     padding: 0 30px;
+    border-radius: 20% 0 20% 0;
 }
 
 @media all and (min-width: 880px){
