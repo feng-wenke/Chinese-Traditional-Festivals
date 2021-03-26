@@ -35,6 +35,10 @@ h1 {
     color: #425664;
 }
 
+.h1 {
+    text-transform: uppercase;
+}
+
 .overview-txt {
     padding: 10%;
     background-color: #425664;
@@ -67,13 +71,18 @@ p > a {
     color: #ffffff;
 }
 
+.active {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
 p > a:hover {
     -webkit-text-decoration-style: dotted;
     text-decoration-style: dotted;
 }
 
 a:hover, a:focus {
-    text-decoration: underline;
+    border: 2px dashed #00838F;
     color: #00838F !important; 
 }
 
