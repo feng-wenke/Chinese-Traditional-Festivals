@@ -27,7 +27,7 @@
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-white shadow fixed-top">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top dark-nav">
         <div class="container-fluid flex-wrap">
           <a class="navbar-brand mb-1 h1" href="index.html">Chinese Traditional Festivals</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,12 +45,34 @@
         </div>
       </nav>
     </header>
-    <main id="main">
-
+    <main id="main" class="contact-txt">
+      <div class='form-wrapper'>
+        <h1>Contact</h1>
+        <form id="my-form" action="https://formspree.io/f/mvodgkdd" method="POST">
+          <div class="form-item">
+            <label for="email">Email</label><span> *</span>
+            <input type="email" name="email" required placeholder="example@domain.com"/>
+          </div>
+          <div class="form-item">
+            <label for="name">Name</label><span> *</span>
+            <input type="text" name="name" required placeholder="Please enter your name"/>
+          </div>
+          <div class="form-item">
+            <label for="message">Message</label><span> *</span>
+            <textarea rows="5" name="message" required placeholder="Please enter your message"></textarea>
+          </div>
+          <button id="my-form-button">Submit</button>
+          <div class="form-item">
+            <p id="my-form-status"></p>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="page-footer font-small">
       <p class="footer-copyright text-center py-3">University of Michigan School of Information <br/>
         &copy; Chenyun Tao - Web Design 2021 </p>
     </footer>
+    <script type="text/javascript" src="js/form_ajax.js"></script>
+    <script type="text/javascript" src="js/navbar_scroll.js"></script>
   </body>
 </html>
