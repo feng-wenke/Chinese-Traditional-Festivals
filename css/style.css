@@ -43,12 +43,43 @@ h1 {
     text-transform: uppercase;
 }
 
+@keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 300%;
+    }
+    
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes slidein {
+    from {
+        margin-right: 100%;
+        width: 300%;
+      }
+    
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
 .overview-txt {
     padding: 20% 10%;
-    background-color: #425664;
     color: #ffffff;
     margin-bottom: 10%;
     margin-top: 0;
+    background-color: #425664;
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/tea.jpg");
+    animation: slidein 5s;
+    -webkit-animation: slidein 5s;
 }
 
 .overview-txt h1 {
@@ -105,8 +136,8 @@ a:hover, a:focus {
 .festival-item {
     border-radius: 10px;
     box-shadow: 3px 3px 6px #646A7A;
-    height: 250px;
-    width: 80%;
+    height: auto;
+    width: 70%;
     perspective: 1000px;
     margin: 10px;
     overflow: hidden;
@@ -128,7 +159,8 @@ a:hover, a:focus {
     transform-style: preserve-3d;
 }
   
-.festival-item:hover .flip-card-inner, .festival-item:focus .flip-card-inner {
+.festival-item:hover .flip-card-inner, .festival-item:focus-within .flip-card-inner,
+.festival-item:active .flip-card-inner, .festival-item:focus .flip-card-inner {
     transform: rotateY(180deg);
 }
   
@@ -150,7 +182,7 @@ a:hover, a:focus {
 }
 
 img {
-    max-height: 200px;
+    height: 240px;
 }
 
 .festival-item img {
@@ -179,7 +211,12 @@ img {
     border-radius: 20% 0 20% 0;
 }
 
-@media all and (min-width: 768px){
+@media screen and (min-width: 768px){
+    /*.navbar {
+        padding: 90px 10px;
+        transition: 0.4s;
+    }*/
+    
     .container-fluid, .collapse {
         justify-content: center !important;
     }
@@ -197,7 +234,12 @@ img {
     }
 
     .festival-item {
+        height: 200px;
         width: 30%;
+    }
+
+    img {
+        height: 150px;
     }
 
     .grid-container {
@@ -234,13 +276,13 @@ img {
     }
 }
 
-@media all and (min-width: 992px){
+@media screen and (min-width: 992px){
     .container-fluid {
         justify-content: space-between !important;
     }
 
     .collapse {
-        justify-content: end !important;
+        justify-content: flex-end !important;
     }
 
     main {
@@ -257,23 +299,16 @@ img {
 
     .festival-item {
         width: 20%;
+        height: 250px;
+    }
+
+    img {
+        height: 200px;
     }
 
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
-    }
-
-    .about-txt, .about-image {
-        grid-row: 1 / span 1;
-    }
-    
-    .food-txt, .food-image {
-        grid-row: 2 / span 1; 
-    }
-
-    .custom-txt, .custom-image {
-        grid-row: 3 / span 1; 
     }
 
     .about-txt, .custom-txt {
@@ -285,7 +320,7 @@ img {
     }
     
     .about-image, .custom-image {
-         grid-column: 3 / span 1;
+        grid-column: 3 / span 1;
     }
 
     .food-image {
@@ -299,12 +334,16 @@ img {
         transition: none;        
      }
 
-    .festival-item:hover .flip-card-inner, .festival-item:focus .flip-card-inner {
-        transform: none;
+    .flip-card-inner {
+        transition: transform none;
     }
   
-    /*
-    header {
+    .overview-txt {
       background-attachment: initial;
-    }*/
+      -webkit-animation: none;
+      animation: none;
+    }
+  }
+
+  @media print { 
   }
