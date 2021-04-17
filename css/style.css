@@ -1,18 +1,23 @@
 html {
     scroll-behavior: smooth;
+    padding: 0;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f6f4f2;
-}
-
-.fixed-top {
-    z-index: 1;
 }
 
 .navbar {
     background-color: #ffffff;
+}
+
+main {
+    background-color: #f6f4f2;
+    padding-bottom: 15%;
+}
+
+.fixed-top {
+    z-index: 1;
 }
 
 .active {
@@ -91,6 +96,7 @@ h1 {
 }
 
 .overview-txt {
+    /* Image source: https://www.bing.com/images/search?view=detailV2&ccid=8Yq25MOF&id=72C8F87D7CD40C7AE4C4B996C7E1709543E55425&thid=OIP.8Yq25MOFYT7XnjRqiGtSLQHaE8&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fRf18ab6e4c385613ed79e346a886b522d%3frik%3dJVTlQ5Vw4ceWuQ%26riu%3dhttp%253a%252f%252fi.epochtimes.com%252fassets%252fuploads%252f2014%252f11%252f1410121024302483.jpg%26ehk%3d0WaQZISCcbN0dnn7sYDh9v%252b9cehR0U3ObEaqe25ESw0%253d%26risl%3d%26pid%3dImgRaw&exph=534&expw=800&q=%e8%8c%b6&simid=608023337468364381&ck=1520FEC8A5D23C203A2C3B43BDECF27E&selectedIndex=0&FORM=IRPRST&ajaxhist=0 */
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/tea.jpg");
     animation: slidein 5s;
     -webkit-animation: slidein 5s;
@@ -98,6 +104,7 @@ h1 {
 }
 
 .contact-txt {
+    /* Image source: https://www.bing.com/images/search?view=detailV2&ccid=97i8pMJg&id=B71D933DC8FD3D6B6DEC892461DC8CED439B08CB&thid=OIP.97i8pMJgop-PmHNdTuuBfQHaD3&mediaurl=https%3a%2f%2fwww.sqm.com%2fwp-content%2fuploads%2f2018%2f04%2fshutterstock_711824767-1024x534.jpg&exph=534&expw=1024&q=contact+image&simid=608051070071608544&ck=A7B3BFE7F000ED76416B3566209103C3&selectedIndex=4&FORM=IRPRST&ajaxhist=0 */
     background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/contact.jpg");
     margin-bottom: 0;
 }
@@ -110,10 +117,6 @@ h1 {
     margin-top: 15%;
 }
 
-main {
-    margin-bottom: 15%;
-}
-
 p {
     padding: 0 3%;
 }
@@ -121,6 +124,7 @@ p {
 footer {
     background-color: #27455B;
     color: white;
+    margin-bottom: -20px;
 }
 
 p > a {
@@ -279,7 +283,7 @@ img {
 }
 
 .form-item span {
-    color: red;
+    color: #A80000;
 }
 
 #my-form button:hover, #my-form button:focus {
@@ -288,6 +292,10 @@ img {
 }
 
 @media screen and (min-width: 768px){  
+    .dark-pass {
+        background-color: #27455B;
+    }
+
     .navbar {
         background-color: transparent;
     }
@@ -310,7 +318,7 @@ img {
     }
 
     main {
-        margin-bottom: 10%;
+        padding-bottom: 10%;
     }
 
     .normal-title {
@@ -374,7 +382,7 @@ img {
     }
 
     main {
-        margin-bottom: 5%;
+        padding-bottom: 5%;
     }
 
     .normal-title {
@@ -417,6 +425,10 @@ img {
 }
 
 @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+
     .skip a {
         -webkit-transition: none; 
         transition: none;        
