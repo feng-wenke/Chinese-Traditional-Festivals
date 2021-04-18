@@ -6,13 +6,13 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.navbar {
-    background-color: #ffffff;
-}
-
 main {
     background-color: #f6f4f2;
     padding-bottom: 15%;
+}
+
+.navbar {
+    background-color: #ffffff;
 }
 
 .fixed-top {
@@ -43,7 +43,7 @@ main {
     width: 100%;
     height: 5px;
     background-color: transparent;
-    z-index: 1031;
+    z-index: 3;
   }
   
 .scroll-progress {
@@ -62,10 +62,6 @@ h1 {
 .h1, h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-}
-
-.h1 {
-    text-transform: uppercase;
 }
 
 h1 {
@@ -126,17 +122,11 @@ h1 {
 }
 
 .normal-title {
-    margin-top: 15%;
+    margin-top: 20%;
 }
 
 p {
     padding: 0 3%;
-}
-
-footer {
-    background-color: #27455B;
-    color: white;
-    margin-bottom: -20px;
 }
 
 p > a {
@@ -155,6 +145,12 @@ p > a:hover {
 a:hover, a:focus {
     border: 2px dashed #00838F;
     color: #00838F !important; 
+}
+
+footer {
+    background-color: #27455B;
+    color: white;
+    margin-bottom: -20px;
 }
 
 .festival {
@@ -181,18 +177,19 @@ a:hover, a:focus {
     border-radius: 10px;
 }
 
+.flip-card-back {
+    display: none;
+}
+
 .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
     transform-style: preserve-3d;
-}
-  
-.festival-item:hover .flip-card-inner, .festival-item:focus-within .flip-card-inner,
-.festival-item:active .flip-card-inner, .festival-item:focus .flip-card-inner {
-    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
 }
   
 .flip-card-front, .flip-card-back {
@@ -201,15 +198,6 @@ a:hover, a:focus {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-  
-.flip-card-back {
-    background-color: #425664;
-    color: white;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 img {
@@ -284,8 +272,6 @@ img {
     color: #fff;
     line-height: 1.2;
     letter-spacing: 1px;
-    -webkit-transition: all .4s;
-    transition: all .4s;
     border: none;
     margin: 10px 0;
 }
@@ -304,6 +290,10 @@ img {
 }
 
 @media screen and (min-width: 768px){  
+    .h1 {
+        text-transform: uppercase;
+    }
+
     .dark-pass {
         background-color: #27455B;
     }
@@ -319,6 +309,7 @@ img {
     .navbar.scrolled {
         background-color: #ffffff;
         transition: background-color 200ms linear;
+        -webkit-transition: background-color 200ms linear;
     }
     
     .dark-nav.scrolled a {
@@ -334,7 +325,7 @@ img {
     }
 
     .normal-title {
-        margin-top: 10%;
+        margin-top: 12%;
     }
 
     .overview-txt, .contact-txt {
@@ -349,6 +340,22 @@ img {
     img {
         height: 150px;
     }
+
+    .festival-item:hover .flip-card-inner, .festival-item:focus-within .flip-card-inner,
+    .festival-item:active .flip-card-inner, .festival-item:focus .flip-card-inner {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+    }    
+
+    .flip-card-back {
+        background-color: #425664;
+        color: white;
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
 
     .grid-container {
         grid-template-columns: 1fr 1fr;
@@ -436,20 +443,7 @@ img {
     }
 }
 
-@media screen and (prefers-reduced-motion: reduce){
-    html{
-        scroll-behavior: auto; 
-    }
-
-    .skip a {
-        -webkit-transition: none; 
-        transition: none;        
-     }
-
-    .flip-card-inner {
-        transition: transform none;
-    }
-  
+@media screen and (prefers-reduced-motion: reduce), print {
     .overview-txt {
         -webkit-animation: none;
         animation: none;
@@ -459,10 +453,46 @@ img {
         background-attachment: initial;
     }
 
-    .navbar.scrolled {
-        transition: none;
+    .scroll-progress-container {
+        display: none;
+     }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+
+    .skip a, .navbar.scrolled {
+        -webkit-transition: none; 
+        transition: none;        
+     }
+
+    .festival-item:hover .flip-card-inner, .festival-item:focus-within .flip-card-inner,
+    .festival-item:active .flip-card-inner, .festival-item:focus .flip-card-inner {
+        -webkit-transform: none;
+        transform: none;
     }
   }
 
-  @media print { 
-  }
+@media print { 
+    .navbar {
+        position: absolute;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .festival {
+        display: block;
+    }
+
+    img, .festival-item {
+        page-break-inside: avoid;
+    }
+
+    .festival-item {
+        margin: 5% auto;
+    }
+}
