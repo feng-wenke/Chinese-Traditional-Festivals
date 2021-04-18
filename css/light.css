@@ -1,0 +1,57 @@
+main {
+    background-color: #f6f4f2;
+}
+
+.navbar, .skip a, .festival-item, .form-wrapper {
+    background-color: #ffffff;
+}
+
+.scroll-progress, #topBtn {
+    background-color: #00838F;
+}
+
+h1 {
+    color: #425664;
+}
+
+.overview-txt, .contact-txt {
+    background-color: #425664;
+}
+
+.overview-txt, .contact-txt, .overview-txt h1, .overview-txt p > a, footer, #topBtn {
+    color: #ffffff;
+}
+
+p > a {
+    color: #000000;
+}
+
+footer {
+    background-color: #27455B;
+}
+
+.form-item span {
+    color: #A80000;
+}
+
+@media screen and (min-width: 768px){  
+    .dark-pass {
+        background-color: #242424;
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+    
+    .dark-nav a {
+        color: #ffffff !important;
+    }
+    
+    .navbar.scrolled {
+        background-color: #ffffff;
+    }
+    
+    .dark-nav.scrolled a {
+        color:black !important;
+    }
+}

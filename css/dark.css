@@ -1,0 +1,51 @@
+body, .form-wrapper {
+    background-color: #242424;
+}
+
+p, p > a, .form-wrapper, #topBtn, nav a, .skip a, .form-item input::placeholder, .form-item textarea::placeholder {
+    color: #ccc;
+}
+
+#topBtn {
+    color: #000000;
+}
+
+nav a {
+    color: #ffffff !important;
+}
+
+h1 {
+    color: #FFCC00;
+}
+
+.navbar, .skip a, .festival-item, footer {
+    background-color: #2B2B2B;
+}
+
+footer {
+    background-color: #353839;
+}
+
+img {
+    filter: brightness(.7) contrast(1.2);
+}
+
+.scroll-progress, #topBtn {
+    background-color: #FF9800;
+}
+
+.form-item span {
+    color: #FF9800;
+}
+
+.form-item input, .form-item textarea, .navbar.scrolled {
+    background-color: #353839;
+}
+
+.navbar-toggler {
+    border-color: #ccc !important;
+}
+  
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
