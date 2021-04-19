@@ -34,6 +34,10 @@ footer {
     color: #A80000;
 }
 
+.form-item input:hover, .form-item input:focus, .form-item textarea:hover, .form-item textarea:focus {
+    box-shadow: 3px 3px 6px #4682B4;
+}
+
 @media screen and (min-width: 768px){  
     .dark-pass {
         background-color: #242424;

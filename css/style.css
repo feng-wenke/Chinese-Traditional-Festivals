@@ -212,7 +212,7 @@ img {
 }
 
 .form-wrapper {
-    width: 75%;
+    width: 80%;
     height: auto;
     border-radius: 10px;
     padding: 8% 8%;
@@ -238,7 +238,11 @@ img {
 
 .form-item input:hover, .form-item input:focus, .form-item textarea:hover, .form-item textarea:focus {
     border: 1px solid transparent;
-    box-shadow: 3px 3px 6px #4682B4;
+}
+
+.form-item input::-webkit-input-placeholder, .form-item input:-ms-input-placeholder, 
+.form-item input:-moz-placeholder, .form-item input::-moz-placeholder { 
+    font-size: 0.6em;
 }
 
 .form-wrapper button {
@@ -285,7 +289,7 @@ img {
 }
 
 .overview-txt .switch-wrap, .contact-txt .switch-wrap {
-    margin: 15% 0;
+    margin: 20% 0 5%;
 }
 
 .switch-wrap p {
@@ -336,7 +340,7 @@ input[type='checkbox'].switch:checked::after {
 }
 
 input[type='checkbox'].switch:focus {
-    box-shadow: 3px 3px 10px #4682B4;
+    box-shadow: 3px 3px 6px #73aca9;
 }
 
 @media screen and (min-width: 768px){  
