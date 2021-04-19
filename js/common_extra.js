@@ -27,6 +27,20 @@ $(function () {
 		$(window).scrollTop(0);
 		$(this).blur();
 	});
+
+	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		$("#dark-switch").prop('checked', true);
+	} else {
+		$("#dark-switch").prop('checked', false);
+	}
+	
+	$("#dark-switch").click(function (){
+		if ($(this).is(":checked")) {
+			$('link[href="css/light.css"]').attr('href','css/dark.css');
+		} else{
+			$('link[href="css/dark.css"]').attr('href','css/light.css');
+		}
+	});
 });
 
 function scrollProgressBar() {
