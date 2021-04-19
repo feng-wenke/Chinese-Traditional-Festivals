@@ -2,7 +2,7 @@ body, .form-wrapper {
     background-color: #242424;
 }
 
-p, p > a, .form-wrapper, #topBtn, nav a, .skip a, .form-item input::placeholder, .form-item textarea::placeholder {
+p, p > a, .form-wrapper, #topBtn, nav a, .skip a, .form-item input::placeholder, .form-item textarea::placeholder, .switch-wrap label {
     color: #ccc;
 }
 

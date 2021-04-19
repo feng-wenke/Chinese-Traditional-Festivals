@@ -40,6 +40,7 @@ $(function () {
 		} else{
 			$('link[href="css/dark.css"]').attr('href','css/light.css');
 		}
+		$(this).blur();
 	});
 });
 

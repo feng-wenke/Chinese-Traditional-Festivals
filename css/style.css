@@ -234,7 +234,7 @@ img {
 
 .form-item input:hover, .form-item input:focus, .form-item textarea:hover, .form-item textarea:focus {
     border: 1px solid transparent;
-    box-shadow: 0 0 3px 0 #4682B4;
+    box-shadow: 3px 3px 6px #4682B4;
 }
 
 .form-wrapper button {
@@ -288,63 +288,52 @@ img {
     padding: 0;
 }
 
-.switch {
-    display: inline-block;
+.switch-wrap label {
+    display: block;
+}
+
+input[type='checkbox'].switch{
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
     position: relative;
-    width: 60px;
-    height: 34px;
+    width: 40px;
+    height: 20px;
+    background: #00838F;
+    border-radius: 10px;
+    transition: border-color .3s, background-color .3s;
+    -webkit-transition: border-color .3s, background-color .3s;
 }
-  
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-  
-input:checked + .slider {
-    background-color: #353839;
-}
-  
-input:focus + .slider {
-    box-shadow: 0 0 3px #4682B4;
-}
-  
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    transform: translateX(26px);
-}
-  
-.slider.round {
-    border-radius: 34px;
-}
-  
-.slider.round:before {
+
+input[type='checkbox'].switch::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height:1rem;
     border-radius: 50%;
-} 
+    background: #fff;
+    box-shadow: 0 0 3px #999;
+    transition:.4s;
+    -webkit-transition: .4s;
+    top: 2px;
+    position: absolute;
+    left: 2px;
+}
+
+input[type='checkbox'].switch:checked {
+    background: #ccc;
+}
+
+input[type='checkbox'].switch:checked::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 2px;
+}
+
+input[type='checkbox'].switch:focus {
+    box-shadow: 3px 3px 10px #4682B4;
+}
 
 @media screen and (min-width: 768px){  
     .h1 {
@@ -503,7 +492,7 @@ input:checked + .slider:before {
         scroll-behavior: auto; 
     }
 
-    .skip a, .navbar.scrolled, .slider, .slider:before {
+    .skip a, .navbar.scrolled, input[type='checkbox'].switch, input[type='checkbox'].switch::after {
         -webkit-transition: none; 
         transition: none;        
      }
