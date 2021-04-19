@@ -6,6 +6,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+header {
+    width: 100%;
+}
+
 main {
     padding-bottom: 15%;
 }
@@ -208,7 +212,7 @@ img {
 }
 
 .form-wrapper {
-    width: 70%;
+    width: 75%;
     height: auto;
     border-radius: 10px;
     padding: 8% 8%;
@@ -276,12 +280,12 @@ img {
 
 .switch-wrap {
     position: relative;
-    margin: 10px 50px;
     padding: 0 3%;
+    margin: 0 50px 5%;
 }
 
-.overview-txt .switch-wrap {
-    margin: 10px 0;
+.overview-txt .switch-wrap, .contact-txt .switch-wrap {
+    margin: 15% 0;
 }
 
 .switch-wrap p {
@@ -359,6 +363,14 @@ input[type='checkbox'].switch:focus {
 
     .overview-txt, .contact-txt {
         padding: 15% 8%;
+    }
+
+    .overview-txt .switch-wrap, .contact-txt .switch-wrap {
+        margin: 10% 0;
+    }
+
+    .switch-wrap {
+        padding:  0 30px;
     }
 
     .festival-item {
@@ -439,6 +451,10 @@ input[type='checkbox'].switch:focus {
 
     .overview-txt, .contact-txt {
         padding: 10% 8%;
+    }
+
+    .overview-txt .switch-wrap, .contact-txt .switch-wrap {
+        margin: 5% 0;
     }
 
     .festival-item {
