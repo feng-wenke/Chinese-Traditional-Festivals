@@ -114,7 +114,7 @@ h1 {
 }
 
 .normal-title {
-    margin-top: 20%;
+    margin-top: 23%;
 }
 
 p {
@@ -240,7 +240,7 @@ img {
     border: 1px solid transparent;
 }
 
-.form-item input::-webkit-input-placeholder, .form-item input:-ms-input-placeholder, 
+.form-item input::placeholder, .form-item input::-webkit-input-placeholder, .form-item input:-ms-input-placeholder, 
 .form-item input:-moz-placeholder, .form-item input::-moz-placeholder { 
     font-size: 0.6em;
 }
