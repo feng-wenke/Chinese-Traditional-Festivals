@@ -14,8 +14,11 @@ $(function () {
 	scrollProgressBar();
 
 	var pathName = $(location).attr('pathname');
-    window.onbeforeunload = function () {
-        var scrollPosition = $(window).scrollTop();
+	if (pathName.endsWith('/')){
+		pathName += 'index.html'
+	}
+	window.onbeforeunload = function () {
+		var scrollPosition = $(window).scrollTop();
 		Cookies.set("pos_" + pathName, scrollPosition.toString(), { secure: true });
 	}
 	
